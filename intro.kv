@@ -1,0 +1,28 @@
+#:kivy 1.9.1
+
+<RootWidget>:
+    Label:
+        text:"Pig Latin Translator"
+        center: self.parent.center
+
+
+    TextInput:
+        id: input
+        center_x: self.parent.center_x
+        top: self.height
+        width: self.parent.width - root.width/10
+
+    Label:
+        id: output
+        text:"blank"
+        center_x: root.center_x
+        center_y:  root.height/3
+
+    AwesomeButton:
+        input_text: input
+        output_label: output
+        center_x: root.center_x
+        top: root.height
+
+<AwesomeButton>:
+    text: "Click Me for a pig latin translator-Please use lowercase only"
